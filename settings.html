@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>User settings</title>
+<style>
+:root {
+    --font-color: white;
+    --font-family: sans-serif;
+    --font-size: clamp(.95rem, 1.35dvw, 1.5rem);
+    --background-color: black;
+    --background-image: url(red-pill-blue-pill.jpg);
+    --darken-overlay-color: rgba(0,0,0,0.4);
+    --pill-font-size: .5rem;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    width: 100dvw;
+    height: 100dvh;
+}
+button {
+    font-size: inherit;
+    font-family: inherit;
+}
+body {
+    color: var(--font-color);
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    display: grid;
+}
+#main_container {
+    min-height: 100dvh;
+    max-height: 100dvh;
+    max-width: 100dvw;
+    aspect-ratio: 4/3;
+    background: var(--background-image), var(--darken-overlay-color);
+    background-blend-mode: darken;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    justify-items: center;
+}
+#pill_heading {
+    padding-top: 1rem;
+}
+#pills {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: clamp(8rem, 30dvw, 15rem);
+    padding-top: clamp(1rem, 12.75dvw, 8rem);
+    justify-content: center;
+}
+#red_pill, #blue_pill {
+    height: clamp(2.5rem, 10dvw, 3.5rem);
+    width: clamp(6rem, 20dvw, 9rem);
+    transform: skewY(7.5deg);
+}
+#pills button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+}
+#red_pill button {
+    background-color: #cc0000;
+    border-color: darkred;
+}
+#blue_pill button {
+    background-color: #0000cc;
+    border-color: darkblue;
+}
+.hr {
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: white;
+    margin-bottom: .1rem;
+    margin-top: .1rem;
+}
+.button-line {
+    display: grid;
+}
+.hr {
+    width: clamp(3rem, 2.25dvw, 9rem);
+}
+.hr-1, .hr-3 {
+    width: clamp(4rem, 2.25dvw, 12rem);
+}
+.button-line-1, .button-line-3 {
+    justify-content: right;
+}
+</style>
+</head>
+<body>
+    <div id="main_container">
+        <h3 id="pill_heading">Automatically open content warnings</h3>
+	<div id="pills">
+	    <div id="red_pill">
+		<div class="button-line button-line-1">
+		    <hr class="hr hr-1">
+		</div>
+		<div class="button-line button-line-2">
+		    <hr class="hr hr-2">
+		</div>
+	        <a href="#"><button>Yes</button></a>
+		<div class="button-line button-line-3">
+		    <hr class="hr hr-3">
+		</div>
+		<div class="button-line button-line-4">
+		    <hr class="hr hr-4">
+		</div>
+	    </div>
+	    <div id="blue_pill">
+		<div class="button-line button-line-1">
+		    <hr class="hr hr-1">
+		</div>
+		<div class="button-line button-line-2">
+		    <hr class="hr hr-2">
+		</div>
+	        <a href="#"><button>No</button></a>
+		<div class="button-line button-line-3">
+		    <hr class="hr hr-3">
+		</div>
+		<div class="button-line button-line-4">
+		    <hr class="hr hr-4">
+		</div>
+	    </div>
+	</div>
+    </div>
+</body>
+</html>
